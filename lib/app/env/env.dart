@@ -69,7 +69,7 @@ class Env {
     final messaging = FirebaseMessaging.instance;
     await messaging.requestPermission(
       alert: true,
-      announcement: false,
+      announcement: true,
       badge: true,
       carPlay: false,
       criticalAlert: false,
