@@ -14,6 +14,7 @@ class Media {
     required this.descriptionTm,
     required this.descriptionRu,
     required this.video,
+    required this.hls,
     required this.image,
     required this.products,
   });
@@ -36,6 +37,7 @@ class Media {
   String? get description => (isRu ? descriptionRu : null) ?? descriptionTm;
 
   final String? video;
+  final String? hls;
   final String? image;
   final List<ProductMini> products;
 }

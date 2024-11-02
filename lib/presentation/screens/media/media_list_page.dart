@@ -11,7 +11,10 @@ class MediaListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
+    return
+        // Player();
+
+        MultiBlocProvider(
       providers: [
         BlocProvider<MediaListBloc>(create: (context) => getIt()),
         BlocProvider<MediaCategoryCubit>(create: (context) => getIt()..load()),

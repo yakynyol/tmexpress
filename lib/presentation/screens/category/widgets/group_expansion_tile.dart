@@ -19,7 +19,8 @@ class GroupExpansionTile extends StatelessWidget {
       backgroundColor: Colors.grey[50],
       children: [
         const SizedBox(height: 12),
-        Stack(
+        Column(
+          // crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             GridView.builder(
               shrinkWrap: true,
@@ -28,29 +29,25 @@ class GroupExpansionTile extends StatelessWidget {
                 crossAxisCount: 3,
                 mainAxisSpacing: 8,
                 crossAxisSpacing: 8,
-                childAspectRatio: .7,
+                mainAxisExtent: 170,
               ),
               itemCount: group.subCategories.length,
               itemBuilder: (_, index) =>
                   SubcategoryW(group.subCategories[index]),
             ),
-            Positioned(
-              bottom: 4,
-              right: 0,
-              child: TextButton(
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                      builder: (_) => ProductsPage(productParent: group)),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(S.current.all,
-                        textAlign: TextAlign.center,
-                        style: AppTextStyle.bold16),
-                    Image.asset('assets/icons/angle-right.png', width: 18),
-                  ],
-                ),
+            TextButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                    builder: (_) => ProductsPage(productParent: group)),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(S.current.all,
+                      textAlign: TextAlign.center, style: AppTextStyle.bold16),
+                  const SizedBox(width: 2),
+                  Image.asset('assets/icons/angle-right.png', width: 20),
+                ],
               ),
             ),
           ],
