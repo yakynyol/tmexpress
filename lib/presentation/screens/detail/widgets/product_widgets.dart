@@ -289,7 +289,9 @@ class ProductWidgets {
             PriceW(
               '${S.current.productPriceWholesale} '
               '(${S.current.productWholesaleDesc(_product.wholesaleLimit)}):',
-              _product.normalPriceW,
+              _product.wholesaleLimit > 0 || _product.normalPriceW == 0
+                  ? _product.normalPrice
+                  : _product.normalPriceW,
             ).exp,
           ],
         ),

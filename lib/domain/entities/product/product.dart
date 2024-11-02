@@ -49,7 +49,9 @@ class Product extends Equatable {
   final Brand? brand;
 
   double normalPriceByCount(int count) =>
-      count >= wholesaleLimit ? normalPriceW : normalPrice;
+      count >= wholesaleLimit && wholesaleLimit > 0
+          ? normalPriceW
+          : normalPrice;
 
   @override
   List<Object?> get props => [id, isLiked];
