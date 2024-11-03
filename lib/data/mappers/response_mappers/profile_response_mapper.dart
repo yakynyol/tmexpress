@@ -22,7 +22,7 @@ class ProfileResponseMapper extends Mapper<ProfileResponse, Profile> {
         address: entity?.address,
         gender: entity?.gender != null ? Gender.values[entity!.gender!] : null,
         region: entity?.region != null ? Region.values[entity!.region!] : null,
-        referralEarning: entity?.referalEarning ?? 0,
-        referralUserCount: entity?.referalUserCount ?? 0);
+        referralEarning: entity?.referralEarning ?? 0,
+        referralCount: entity?.referralCount ?? 0);
   }
 }

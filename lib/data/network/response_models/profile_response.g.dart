@@ -14,8 +14,8 @@ ProfileResponse _$ProfileResponseFromJson(Map<String, dynamic> json) =>
       region: (json['region'] as num?)?.toInt(),
       address: json['address'] as String?,
       username: json['username'] as String?,
-      referalEarning: (json['referalEarning'] as num?)?.toDouble(),
-      referalUserCount: (json['referalUserCount'] as num?)?.toInt(),
+      referralEarning: (json['referralEarning'] as num?)?.toDouble(),
+      referralCount: (json['referralCount'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ProfileResponseToJson(ProfileResponse instance) =>
@@ -26,6 +26,6 @@ Map<String, dynamic> _$ProfileResponseToJson(ProfileResponse instance) =>
       'region': instance.region,
       'address': instance.address,
       'username': instance.username,
-      'referalUserCount': instance.referalUserCount,
-      'referalEarning': instance.referalEarning,
+      'referralCount': instance.referralCount,
+      'referralEarning': instance.referralEarning,
     };

@@ -11,8 +11,8 @@ class ProfileResponse {
     this.region,
     this.address,
     this.username,
-    this.referalEarning,
-    this.referalUserCount,
+    this.referralEarning,
+    this.referralCount,
   });
 
   factory ProfileResponse.fromJson(Map<String, dynamic> json) =>
@@ -25,6 +25,6 @@ class ProfileResponse {
   final int? region;
   final String? address;
   final String? username;
-  final int? referalUserCount;
-  final double? referalEarning;
+  final int? referralCount;
+  final double? referralEarning;
 }

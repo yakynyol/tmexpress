@@ -72,6 +72,8 @@
   "continueButton": "Dowam etmek",
   "makeOrder": "Sargyt etmek",
   "total": "Jemi",
+  "discount": "Referal",
+  "cash": "Töleg",
   "nMan": "{total} man.",
   "orderCreated": "Sargydyňyz kabul edildi. Sargydyňyzy profildäki Sargytlarym bölüminden yzarlap bilersiňiz.\nSöwdanyň üçin sag boluň!",
   "ok": "Bolýar",
@@ -162,5 +164,11 @@
   "similarProducts": "Meňzeş harytlar",
   "shops": "Dükanlar",
   "orderId": "Sargyt ID",
-  "wrongCode": "Nädogry kod"
+  "wrongCode": "Nädogry kod",
+
+  "referralUsers": "Ulanyjylar:",
+  "referralUsersDescription": "Programma siziň maslahatyňyz bilen giren ulanyjylaryň sany",
+  "referralEarning": "Balans:",
+  "referralEarningDescription": "Siziň programma çagyran ulanyjylaryňyz harydy satyn alanda, siziň hasabyňyza edilen söwdalaryň belli bir % geçirilýär.\n\nEger-de siziň hasabyňyzda pul bar bolsa, indiki etjek söwdaňyzda tölemeli pulyňyzdan aýrylar."
+
 }

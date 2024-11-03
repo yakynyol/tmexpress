@@ -7,6 +7,7 @@ class PlacedOrder {
     required this.user,
     required this.status,
     required this.totalPrice,
+    required this.orderDiscount,
     required this.createdAt,
     required this.updatedAt,
     required this.orderItems,
@@ -16,6 +17,7 @@ class PlacedOrder {
   final int user;
   final OrderStatus status;
   final double totalPrice;
+  final double orderDiscount;
   final DateTime createdAt;
   final DateTime updatedAt;
   final List<PlacedOrderItem> orderItems;

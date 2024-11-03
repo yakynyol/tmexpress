@@ -6,7 +6,7 @@ import 'enums/region.dart';
 class Profile extends Equatable {
   const Profile({
     required this.phone,
-    required this.referralUserCount,
+    required this.referralCount,
     required this.referralEarning,
     required this.id,
     this.name,
@@ -21,7 +21,7 @@ class Profile extends Equatable {
   final Gender? gender;
   final Region? region;
   final String? address;
-  final int referralUserCount;
+  final int referralCount;
   final double referralEarning;
 
   Map<String, dynamic> toJson() => {
@@ -44,7 +44,7 @@ class Profile extends Equatable {
           gender: gender ?? this.gender,
           region: region ?? this.region,
           address: address ?? this.address,
-          referralUserCount: referralUserCount,
+          referralCount: referralCount,
           referralEarning: referralEarning);
 
   @override

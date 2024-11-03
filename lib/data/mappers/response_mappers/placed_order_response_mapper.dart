@@ -18,6 +18,7 @@ class PlacedOrderResponseMapper
       user: entity?.user ?? 0,
       status: orderStatuses[entity?.status] ?? orderStatuses.values.toList()[0],
       totalPrice: entity?.totalPrice ?? 0,
+      orderDiscount: entity?.orderDiscount ?? 0,
       createdAt: DateTime.parse(entity?.createdAt ?? '').toLocal(),
       updatedAt: DateTime.parse(entity?.updatedAt ?? '').toLocal(),
       orderItems: _placedOrderItemResponseMapper.mapList(entity?.orderitems));

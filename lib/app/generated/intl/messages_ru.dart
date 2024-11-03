@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Не удалось открыть приложение для отправки СМС. Пожалуйста перейдите сами и отправте сообщение."),
         "cart": MessageLookupByLibrary.simpleMessage("Корзина"),
         "cartEmpty": MessageLookupByLibrary.simpleMessage("Корзина пуста"),
+        "cash": MessageLookupByLibrary.simpleMessage("К оплате"),
         "categories": MessageLookupByLibrary.simpleMessage("Категории"),
         "close": MessageLookupByLibrary.simpleMessage("Закрыть"),
         "code": MessageLookupByLibrary.simpleMessage("Код"),
@@ -75,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Удалить аккаунт"),
         "delivered": MessageLookupByLibrary.simpleMessage("ДОставлен"),
         "description": MessageLookupByLibrary.simpleMessage("Описание"),
+        "discount": MessageLookupByLibrary.simpleMessage("Реферал"),
         "doubleBackToExit":
             MessageLookupByLibrary.simpleMessage("Нажмите еще раз для выхода"),
         "dz": MessageLookupByLibrary.simpleMessage("Дашауз"),
@@ -147,6 +149,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Готово к доставке"),
         "readyToShip":
             MessageLookupByLibrary.simpleMessage("Готово к отправке"),
+        "referralEarning": MessageLookupByLibrary.simpleMessage("Баланс:"),
+        "referralEarningDescription": MessageLookupByLibrary.simpleMessage(
+            "Когда пользователи, приглашенные вами, совершают покупки, определенный процент от сделки зачисляется на ваш счет.\n\nЕсли на вашем счету есть средства, они будут вычтены из суммы вашей следующей покупки."),
+        "referralUsers": MessageLookupByLibrary.simpleMessage("Пользователи:"),
+        "referralUsersDescription": MessageLookupByLibrary.simpleMessage(
+            "Количество пользователей, которые присоединились по вашей рекомендации"),
         "referrersPhone":
             MessageLookupByLibrary.simpleMessage("Телефон рекомендателя"),
         "region": MessageLookupByLibrary.simpleMessage("Область (город)"),

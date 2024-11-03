@@ -670,6 +670,26 @@ class S {
     );
   }
 
+  /// `Referal`
+  String get discount {
+    return Intl.message(
+      'Referal',
+      name: 'discount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Töleg`
+  String get cash {
+    return Intl.message(
+      'Töleg',
+      name: 'cash',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `{total} man.`
   String nMan(Object total) {
     return Intl.message(
@@ -1505,6 +1525,46 @@ class S {
     return Intl.message(
       'Nädogry kod',
       name: 'wrongCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ulanyjylar:`
+  String get referralUsers {
+    return Intl.message(
+      'Ulanyjylar:',
+      name: 'referralUsers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Programma siziň maslahatyňyz bilen giren ulanyjylaryň sany`
+  String get referralUsersDescription {
+    return Intl.message(
+      'Programma siziň maslahatyňyz bilen giren ulanyjylaryň sany',
+      name: 'referralUsersDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Balans:`
+  String get referralEarning {
+    return Intl.message(
+      'Balans:',
+      name: 'referralEarning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Siziň programma çagyran ulanyjylaryňyz harydy satyn alanda, siziň hasabyňyza edilen söwdalaryň belli bir % geçirilýär.\n\nEger-de siziň hasabyňyzda pul bar bolsa, indiki etjek söwdaňyzda tölemeli pulyňyzdan aýrylar.`
+  String get referralEarningDescription {
+    return Intl.message(
+      'Siziň programma çagyran ulanyjylaryňyz harydy satyn alanda, siziň hasabyňyza edilen söwdalaryň belli bir % geçirilýär.\n\nEger-de siziň hasabyňyzda pul bar bolsa, indiki etjek söwdaňyzda tölemeli pulyňyzdan aýrylar.',
+      name: 'referralEarningDescription',
       desc: '',
       args: [],
     );

@@ -11,6 +11,7 @@ class PlacedOrderResponse {
     this.user,
     this.status,
     this.totalPrice,
+    this.orderDiscount,
     this.createdAt,
     this.updatedAt,
     this.orderitems,
@@ -24,6 +25,7 @@ class PlacedOrderResponse {
   final int? user;
   final String? status;
   final double? totalPrice;
+  final double? orderDiscount;
   final String? createdAt;
   final String? updatedAt;
   final List<PlacedOrderItemResponse>? orderitems;

@@ -51,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "SMS programmany açmakda näsazlyk ýüze çykdy. SMS programma geçip, bellenen nomere bellenen kody ugratmagyňyzy haýyş edýäris."),
         "cart": MessageLookupByLibrary.simpleMessage("Sebet"),
         "cartEmpty": MessageLookupByLibrary.simpleMessage("Sebetde haryt ýok"),
+        "cash": MessageLookupByLibrary.simpleMessage("Töleg"),
         "categories": MessageLookupByLibrary.simpleMessage("Bölümler"),
         "close": MessageLookupByLibrary.simpleMessage("Ýapmak"),
         "code": MessageLookupByLibrary.simpleMessage("Kod"),
@@ -73,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "deleteAccount": MessageLookupByLibrary.simpleMessage("Hasaby pozmak"),
         "delivered": MessageLookupByLibrary.simpleMessage("Gowşyryldy"),
         "description": MessageLookupByLibrary.simpleMessage("Beýany"),
+        "discount": MessageLookupByLibrary.simpleMessage("Referal"),
         "doubleBackToExit": MessageLookupByLibrary.simpleMessage(
             "Çykmak üçin ýene bir gezek basyň"),
         "dz": MessageLookupByLibrary.simpleMessage("Daşoguz"),
@@ -152,6 +154,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gowşyrylmaga taýýar"),
         "readyToShip":
             MessageLookupByLibrary.simpleMessage("Ugradylmaga taýýar"),
+        "referralEarning": MessageLookupByLibrary.simpleMessage("Balans:"),
+        "referralEarningDescription": MessageLookupByLibrary.simpleMessage(
+            "Siziň programma çagyran ulanyjylaryňyz harydy satyn alanda, siziň hasabyňyza edilen söwdalaryň belli bir % geçirilýär.\n\nEger-de siziň hasabyňyzda pul bar bolsa, indiki etjek söwdaňyzda tölemeli pulyňyzdan aýrylar."),
+        "referralUsers": MessageLookupByLibrary.simpleMessage("Ulanyjylar:"),
+        "referralUsersDescription": MessageLookupByLibrary.simpleMessage(
+            "Programma siziň maslahatyňyz bilen giren ulanyjylaryň sany"),
         "referrersPhone":
             MessageLookupByLibrary.simpleMessage("Maslahat bereniň nomeri"),
         "region": MessageLookupByLibrary.simpleMessage("Welaýat (şäher)"),

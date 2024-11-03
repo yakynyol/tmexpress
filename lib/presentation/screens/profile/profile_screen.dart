@@ -11,6 +11,7 @@ import 'favorites_screen.dart';
 import 'placed_orders/placed_orders_page.dart';
 import 'widgets/profile_card.dart';
 import 'widgets/profile_error.dart';
+import 'widgets/referral_card.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -37,7 +38,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: [
             ProfileCard(state.profile),
             const SizedBox(height: 16),
-          ReferralCard(state.profile),
+            ReferralCard(state.profile),
             const SizedBox(height: 16),
             AppButton(
               label: S.current.favorites,
