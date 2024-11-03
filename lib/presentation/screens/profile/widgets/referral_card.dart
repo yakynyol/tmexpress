@@ -38,19 +38,18 @@ class ReferralCard extends StatelessWidget {
 
   Column _referralItem(BuildContext context, String title, String content) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(title, style: AppTextStyle.grey14),
+        const SizedBox(height: 4),
         Text(content, style: AppTextStyle.bold24),
-        Center(
-          child: TextButton(
-            onPressed: () => showDialog<void>(
-              context: context,
-              builder: (_) => _aboutReferralItem(title),
-            ),
-            child: Text(S.current.whatIsThis, style: AppTextStyle.grey14),
-            style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
+        TextButton(
+          onPressed: () => showDialog<void>(
+            context: context,
+            builder: (_) => _aboutReferralItem(title),
           ),
+          child: Text(S.current.whatIsThis, style: AppTextStyle.grey14),
+          style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
         )
       ],
     );

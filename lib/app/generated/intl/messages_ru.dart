@@ -69,7 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "connectionError":
             MessageLookupByLibrary.simpleMessage("Нет интернета"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Продолжить"),
-        "count": MessageLookupByLibrary.simpleMessage("количество"),
+        "count": MessageLookupByLibrary.simpleMessage(""),
         "country": MessageLookupByLibrary.simpleMessage("Страна производства"),
         "declined": MessageLookupByLibrary.simpleMessage("Не принято"),
         "deleteAccount":
@@ -104,13 +104,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Войти"),
         "makeOrder": MessageLookupByLibrary.simpleMessage("Заказать"),
         "man": MessageLookupByLibrary.simpleMessage("Мужчина"),
-        "manat": MessageLookupByLibrary.simpleMessage("манат"),
+        "manat": MessageLookupByLibrary.simpleMessage("ман"),
         "media": MessageLookupByLibrary.simpleMessage("Медиа"),
         "mr": MessageLookupByLibrary.simpleMessage("Мары"),
         "nMan": m0,
         "name": MessageLookupByLibrary.simpleMessage("Имя"),
         "next": MessageLookupByLibrary.simpleMessage("Далее"),
-        "noData": MessageLookupByLibrary.simpleMessage("Данные не ввседены"),
+        "noData": MessageLookupByLibrary.simpleMessage("Данные не введены"),
         "noFavorites":
             MessageLookupByLibrary.simpleMessage("У вас нет избранных товаров"),
         "noOrders":
