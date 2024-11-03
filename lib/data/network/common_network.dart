@@ -101,6 +101,7 @@ abstract class CommonNetwork {
   @POST('/api/auth/start-sms-sign-in/')
   Future<void> startSMSSignIn(
     @Field('username') String phone,
+    @Field('referral') String? referrer,
   );
 
   @POST('/api/auth/sign-in-with-sms/')

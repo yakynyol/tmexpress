@@ -10,11 +10,13 @@ class AuthCheckRequested extends AuthEvent {}
 class AuthSMSSignInStarted extends AuthEvent {
   AuthSMSSignInStarted({
     required this.phone,
+    required this.referrer,
   });
   final String phone;
+  final String referrer;
 
   @override
-  List<Object?> get props => [phone];
+  List<Object?> get props => [phone, referrer];
 }
 
 class AuthSignInWithSMS extends AuthEvent {

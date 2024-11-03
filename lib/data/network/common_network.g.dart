@@ -534,11 +534,19 @@ class _CommonNetwork implements CommonNetwork {
   }
 
   @override
-  Future<void> startSMSSignIn(String phone) async {
+  Future<void> startSMSSignIn(
+    String phone,
+    String? referrer,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
-    final _data = {'username': phone};
+    final _data = {
+      'username': phone,
+      'referral': referrer,
+    };
+    _data.removeWhere((k, v) => v == null);
     final _options = _setStreamType<void>(Options(
       method: 'POST',
       headers: _headers,

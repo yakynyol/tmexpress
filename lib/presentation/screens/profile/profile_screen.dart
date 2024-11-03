@@ -36,8 +36,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           padding: const EdgeInsets.all(16),
           children: [
             ProfileCard(state.profile),
-            // const SizedBox(height: 16),
-            // ReferralCard(state.profile),
+            const SizedBox(height: 16),
+          ReferralCard(state.profile),
             const SizedBox(height: 16),
             AppButton(
               label: S.current.favorites,

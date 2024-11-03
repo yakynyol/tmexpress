@@ -63,6 +63,7 @@
 
   "login": "Hasaba girmek",
   "phone": "Telefon belgiňiz",
+  "referrersPhone": "Maslahat bereniň nomeri",
   "sendSms": "SMS ugratmak",
   "sendSmsExplanation": "Hasaba girmek üçin, \n{phone} belgä {code} kody SMS arkaly ugradyň we programma dolanyň.",
   "waitingVerificationText": "Siziň telefon belgiňiz tassyklanýar. 1-2 minut garaşmagyňyzy haýyş edýäris)",

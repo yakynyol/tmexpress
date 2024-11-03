@@ -590,6 +590,16 @@ class S {
     );
   }
 
+  /// `Maslahat bereniň nomeri`
+  String get referrersPhone {
+    return Intl.message(
+      'Maslahat bereniň nomeri',
+      name: 'referrersPhone',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `SMS ugratmak`
   String get sendSms {
     return Intl.message(

@@ -14,7 +14,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<AuthSMSSignInStarted>(
       (event, emit) async {
         phone = event.phone.replaceAll(' ', '');
-        final r = await repository.startSMSSignIn(phone);
+        final referrer = event.referrer.replaceAll(' ', '');
+        final r = await repository.startSMSSignIn(phone, referrer);
         emit(r.fold(
           (l) => AuthError(l.message),
           (r) => const AuthEnterCode(),

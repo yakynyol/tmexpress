@@ -147,6 +147,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Готово к доставке"),
         "readyToShip":
             MessageLookupByLibrary.simpleMessage("Готово к отправке"),
+        "referrersPhone":
+            MessageLookupByLibrary.simpleMessage("Телефон рекомендателя"),
         "region": MessageLookupByLibrary.simpleMessage("Область (город)"),
         "removeFromCart":
             MessageLookupByLibrary.simpleMessage("Удалить из корзины"),

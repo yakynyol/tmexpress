@@ -18,27 +18,30 @@ class AuthPhoneForm extends StatefulWidget {
 
 class _AuthPhoneFormState extends State<AuthPhoneForm> {
   late TextEditingController _phoneC;
+  late TextEditingController _referrerC;
   final _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
     super.initState();
     _phoneC = TextEditingController();
+    _referrerC = TextEditingController();
   }
 
   @override
   void dispose() {
     _phoneC.dispose();
+    _referrerC.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Form(
-          key: _formKey,
-          child: TextFormField(
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: [
+          TextFormField(
             controller: _phoneC,
             validator: AppValidator.phone,
             onFieldSubmitted: (_) => _submit(),
@@ -50,20 +53,33 @@ class _AuthPhoneFormState extends State<AuthPhoneForm> {
               floatingLabelBehavior: FloatingLabelBehavior.never,
             ),
           ),
-        ),
-        const SizedBox(height: 16),
-        AppButton(
-          label: S.current.sendSms,
-          onPressed: _submit,
-          type: ButtonType.black,
-        ),
-      ],
+          const SizedBox(height: 16),
+          TextFormField(
+            controller: _referrerC,
+            onFieldSubmitted: (_) => _submit(),
+            inputFormatters: [MaskTextInputFormatter(mask: '## ######')],
+            keyboardType: TextInputType.phone,
+            decoration: InputDecoration(
+              label: Text(S.current.referrersPhone),
+              prefix: const Text('+993 '),
+              floatingLabelBehavior: FloatingLabelBehavior.never,
+            ),
+          ),
+          const SizedBox(height: 16),
+          AppButton(
+            label: S.current.sendSms,
+            onPressed: _submit,
+            type: ButtonType.black,
+          ),
+        ],
+      ),
     );
   }
 
   void _submit() {
     if (_formKey.currentState?.validate() ?? false) {
-      context.read<AuthBloc>().add(AuthSMSSignInStarted(phone: _phoneC.text));
+      context.read<AuthBloc>().add(
+          AuthSMSSignInStarted(phone: _phoneC.text, referrer: _referrerC.text));
     }
   }
 }

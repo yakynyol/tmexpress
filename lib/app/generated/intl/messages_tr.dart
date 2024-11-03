@@ -152,6 +152,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gowşyrylmaga taýýar"),
         "readyToShip":
             MessageLookupByLibrary.simpleMessage("Ugradylmaga taýýar"),
+        "referrersPhone":
+            MessageLookupByLibrary.simpleMessage("Maslahat bereniň nomeri"),
         "region": MessageLookupByLibrary.simpleMessage("Welaýat (şäher)"),
         "removeFromCart":
             MessageLookupByLibrary.simpleMessage("Sebetden aýyrmak"),
