@@ -134,6 +134,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "page3subtitle":
             MessageLookupByLibrary.simpleMessage("в короткие сроки!"),
         "page3title": MessageLookupByLibrary.simpleMessage("Получите заказы"),
+        "paid": MessageLookupByLibrary.simpleMessage("Оплачено"),
+        "paymentHistory":
+            MessageLookupByLibrary.simpleMessage("История платежей"),
         "phone": MessageLookupByLibrary.simpleMessage("Номер телефона"),
         "privacyPolicyLink":
             MessageLookupByLibrary.simpleMessage("media/privacy_policy.pdf"),
@@ -158,6 +161,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "referrersPhone":
             MessageLookupByLibrary.simpleMessage("Телефон рекомендателя"),
         "region": MessageLookupByLibrary.simpleMessage("Область (город)"),
+        "remaining": MessageLookupByLibrary.simpleMessage("Осталось"),
         "removeFromCart":
             MessageLookupByLibrary.simpleMessage("Удалить из корзины"),
         "removeFromFavorites":
@@ -215,6 +219,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "start": MessageLookupByLibrary.simpleMessage("Начать"),
         "today": MessageLookupByLibrary.simpleMessage("Сегодня"),
         "total": MessageLookupByLibrary.simpleMessage("Сумма"),
+        "totalPrice": MessageLookupByLibrary.simpleMessage("Общая сумма"),
         "unknownError": MessageLookupByLibrary.simpleMessage(
             "Временно недоступно.\nПопробуйте позже..."),
         "userAgreementLink":

@@ -19,6 +19,13 @@ PlacedOrderResponse _$PlacedOrderResponseFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               PlacedOrderItemResponse.fromJson(e as Map<String, dynamic>))
           .toList(),
+      payments: (json['payments'] as List<dynamic>?)
+          ?.map((e) => PaymentResponse.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      paymentSummary: json['payment_summary'] == null
+          ? null
+          : PaymentSummaryResponse.fromJson(
+              json['payment_summary'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$PlacedOrderResponseToJson(
@@ -32,4 +39,6 @@ Map<String, dynamic> _$PlacedOrderResponseToJson(
       'createdAt': instance.createdAt,
       'updatedAt': instance.updatedAt,
       'orderitems': instance.orderitems?.map((e) => e.toJson()).toList(),
+      'payments': instance.payments?.map((e) => e.toJson()).toList(),
+      'payment_summary': instance.paymentSummary?.toJson(),
     };

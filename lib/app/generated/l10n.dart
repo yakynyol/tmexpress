@@ -1569,6 +1569,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Umumy bahasy`
+  String get totalPrice {
+    return Intl.message(
+      'Umumy bahasy',
+      name: 'totalPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tölendi:`
+  String get paid {
+    return Intl.message(
+      'Tölendi:',
+      name: 'paid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Galdy:`
+  String get remaining {
+    return Intl.message(
+      'Galdy:',
+      name: 'remaining',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Töleg taryhy`
+  String get paymentHistory {
+    return Intl.message(
+      'Töleg taryhy',
+      name: 'paymentHistory',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -169,6 +169,9 @@
   "referralUsers": "Ulanyjylar:",
   "referralUsersDescription": "Programma siziň maslahatyňyz bilen giren ulanyjylaryň sany",
   "referralEarning": "Balans:",
-  "referralEarningDescription": "Siziň programma çagyran ulanyjylaryňyz harydy satyn alanda, siziň hasabyňyza edilen söwdalaryň belli bir % geçirilýär.\n\nEger-de siziň hasabyňyzda pul bar bolsa, indiki etjek söwdaňyzda tölemeli pulyňyzdan aýrylar."
-
+  "referralEarningDescription": "Siziň programma çagyran ulanyjylaryňyz harydy satyn alanda, siziň hasabyňyza edilen söwdalaryň belli bir % geçirilýär.\n\nEger-de siziň hasabyňyzda pul bar bolsa, indiki etjek söwdaňyzda tölemeli pulyňyzdan aýrylar.",
+  "totalPrice": "Umumy bahasy",
+  "paid": "Tölendi:",
+  "remaining": "Galdy:",
+  "paymentHistory": "Töleg taryhy"
 }

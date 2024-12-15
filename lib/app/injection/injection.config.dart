@@ -27,6 +27,10 @@ import '../../data/mappers/response_mappers/image_response_mapper.dart'
     as _i152;
 import '../../data/mappers/response_mappers/media_pagination_response_mapper.dart'
     as _i291;
+import '../../data/mappers/response_mappers/payment_response_mapper.dart'
+    as _i712;
+import '../../data/mappers/response_mappers/payment_summary_response_mapper.dart'
+    as _i1029;
 import '../../data/mappers/response_mappers/placed_order_item_response_mapper.dart'
     as _i665;
 import '../../data/mappers/response_mappers/placed_order_response_mapper.dart'
@@ -159,6 +163,10 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i152.ImageResponseMapper>(
         () => _i152.ImageResponseMapper());
     gh.lazySingleton<_i394.ErrorMapper>(() => _i394.ErrorMapper());
+    gh.lazySingleton<_i712.PaymentResponseMapper>(
+        () => _i712.PaymentResponseMapper());
+    gh.lazySingleton<_i1029.PaymentSummaryResponseMapper>(
+        () => _i1029.PaymentSummaryResponseMapper());
     gh.lazySingleton<_i580.TagResponseMapper>(
         () => _i580.TagResponseMapper(gh<_i362.ProductMiniResponseMapper>()));
     gh.lazySingleton<_i90.PreferencesRepository>(
@@ -184,6 +192,12 @@ extension GetItInjectableX on _i174.GetIt {
             ));
     gh.lazySingleton<_i285.ExceptionHandler>(
         () => _i285.ExceptionHandler(gh<_i394.ErrorMapper>()));
+    gh.lazySingleton<_i701.PlacedOrderResponseMapper>(
+        () => _i701.PlacedOrderResponseMapper(
+              gh<_i665.PlacedOrderItemResponseMapper>(),
+              gh<_i712.PaymentResponseMapper>(),
+              gh<_i1029.PaymentSummaryResponseMapper>(),
+            ));
     gh.lazySingleton<_i181.GetIntPreferenceUseCase>(
         () => _i181.GetIntPreferenceUseCase(gh<_i90.PreferencesRepository>()));
     gh.lazySingleton<_i597.GetStringPreferenceUseCase>(() =>
@@ -201,9 +215,13 @@ extension GetItInjectableX on _i174.GetIt {
         _i599.GetDoublePreferenceUseCase(gh<_i90.PreferencesRepository>()));
     gh.lazySingleton<_i754.CategoryResponseMapper>(
         () => _i754.CategoryResponseMapper(gh<_i573.GroupResponseMapper>()));
-    gh.lazySingleton<_i701.PlacedOrderResponseMapper>(() =>
-        _i701.PlacedOrderResponseMapper(
-            gh<_i665.PlacedOrderItemResponseMapper>()));
+    gh.lazySingleton<_i507.OrderRepository>(() => _i1014.OrderRepositoryImpl(
+          gh<_i285.ExceptionHandler>(),
+          gh<_i766.AuthNetwork>(),
+          gh<_i701.PlacedOrderResponseMapper>(),
+          gh<_i452.CommonNetwork>(),
+          gh<_i827.ShippingOptionPaginationResponseMapper>(),
+        ));
     gh.lazySingleton<_i933.ProductRepository>(() => _i876.ProductRepositoryImpl(
           gh<_i285.ExceptionHandler>(),
           gh<_i452.CommonNetwork>(),
@@ -251,6 +269,14 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i527.MediaListBloc(gh<_i777.MediaRepository>()));
     gh.factory<_i13.HomeBloc>(
         () => _i13.HomeBloc(gh<_i343.FetchHomeUseCase>()));
+    gh.lazySingleton<_i881.GetPlacedOrderUseCase>(
+        () => _i881.GetPlacedOrderUseCase(gh<_i507.OrderRepository>()));
+    gh.lazySingleton<_i169.FetchPlacedOrdersUseCase>(
+        () => _i169.FetchPlacedOrdersUseCase(gh<_i507.OrderRepository>()));
+    gh.lazySingleton<_i214.FetchShippingOptions>(
+        () => _i214.FetchShippingOptions(gh<_i507.OrderRepository>()));
+    gh.lazySingleton<_i875.CreateOrderUseCase>(
+        () => _i875.CreateOrderUseCase(gh<_i507.OrderRepository>()));
     gh.lazySingleton<_i47.ProfileRepository>(() => _i813.ProfileRepositoryImpl(
           gh<_i285.ExceptionHandler>(),
           gh<_i452.CommonNetwork>(),
@@ -268,19 +294,22 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i597.GetStringPreferenceUseCase>(),
           gh<_i121.SetPreferenceUseCase>(),
         ));
+    gh.factory<_i537.PlacedOrdersBloc>(
+        () => _i537.PlacedOrdersBloc(gh<_i169.FetchPlacedOrdersUseCase>()));
     gh.factory<_i1072.SearchBloc>(
         () => _i1072.SearchBloc(gh<_i350.SearchProductsUseCase>()));
     gh.lazySingleton<_i190.AuthUseCase>(
         () => _i190.AuthUseCase(gh<_i47.ProfileRepository>()));
-    gh.lazySingleton<_i507.OrderRepository>(() => _i1014.OrderRepositoryImpl(
-          gh<_i285.ExceptionHandler>(),
-          gh<_i766.AuthNetwork>(),
-          gh<_i701.PlacedOrderResponseMapper>(),
-          gh<_i452.CommonNetwork>(),
-          gh<_i827.ShippingOptionPaginationResponseMapper>(),
+    gh.factory<_i416.CartBloc>(() => _i416.CartBloc(
+          gh<_i875.CreateOrderUseCase>(),
+          gh<_i450.HiveBoxes>(),
         ));
     gh.factory<_i785.FilterBloc>(
         () => _i785.FilterBloc(gh<_i604.FetchSubcategorySizesUseCase>()));
+    gh.factory<_i765.PlacedOrderBloc>(
+        () => _i765.PlacedOrderBloc(gh<_i881.GetPlacedOrderUseCase>()));
+    gh.factory<_i535.ShippingOptionsBloc>(
+        () => _i535.ShippingOptionsBloc(gh<_i214.FetchShippingOptions>()));
     gh.factory<_i309.DetailBloc>(() => _i309.DetailBloc(
           gh<_i96.FetchProductUseCase>(),
           gh<_i594.LikeProductUseCase>(),
@@ -289,38 +318,20 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i422.BrandsBloc(gh<_i398.FetchBrandsUseCase>()));
     gh.factory<_i445.HotBloc>(
         () => _i445.HotBloc(gh<_i350.SearchProductsUseCase>()));
-    gh.lazySingleton<_i881.GetPlacedOrderUseCase>(
-        () => _i881.GetPlacedOrderUseCase(gh<_i507.OrderRepository>()));
-    gh.lazySingleton<_i169.FetchPlacedOrdersUseCase>(
-        () => _i169.FetchPlacedOrdersUseCase(gh<_i507.OrderRepository>()));
-    gh.lazySingleton<_i214.FetchShippingOptions>(
-        () => _i214.FetchShippingOptions(gh<_i507.OrderRepository>()));
-    gh.lazySingleton<_i875.CreateOrderUseCase>(
-        () => _i875.CreateOrderUseCase(gh<_i507.OrderRepository>()));
     gh.factory<_i253.AuthBloc>(
         () => _i253.AuthBloc(gh<_i47.ProfileRepository>()));
     gh.lazySingleton<_i493.EditProfileUseCase>(
         () => _i493.EditProfileUseCase(gh<_i47.ProfileRepository>()));
     gh.lazySingleton<_i1012.FetchProfileUseCase>(
         () => _i1012.FetchProfileUseCase(gh<_i47.ProfileRepository>()));
-    gh.factory<_i537.PlacedOrdersBloc>(
-        () => _i537.PlacedOrdersBloc(gh<_i169.FetchPlacedOrdersUseCase>()));
     gh.factory<_i1064.EditProfileBloc>(
         () => _i1064.EditProfileBloc(gh<_i493.EditProfileUseCase>()));
-    gh.factory<_i416.CartBloc>(() => _i416.CartBloc(
-          gh<_i875.CreateOrderUseCase>(),
-          gh<_i450.HiveBoxes>(),
-        ));
     gh.factory<_i810.ProfileBloc>(() => _i810.ProfileBloc(
           gh<_i597.GetStringPreferenceUseCase>(),
           gh<_i1012.FetchProfileUseCase>(),
           gh<_i121.SetPreferenceUseCase>(),
           gh<_i47.ProfileRepository>(),
         ));
-    gh.factory<_i765.PlacedOrderBloc>(
-        () => _i765.PlacedOrderBloc(gh<_i881.GetPlacedOrderUseCase>()));
-    gh.factory<_i535.ShippingOptionsBloc>(
-        () => _i535.ShippingOptionsBloc(gh<_i214.FetchShippingOptions>()));
     return this;
   }
 }

@@ -1,4 +1,6 @@
 import 'order_status.dart';
+import 'payment.dart';
+import 'payment_summary.dart';
 import 'placed_order_item.dart';
 
 class PlacedOrder {
@@ -11,6 +13,8 @@ class PlacedOrder {
     required this.createdAt,
     required this.updatedAt,
     required this.orderItems,
+    required this.payments,
+    required this.paymentSummary,
   });
 
   final int id;
@@ -21,4 +25,6 @@ class PlacedOrder {
   final DateTime createdAt;
   final DateTime updatedAt;
   final List<PlacedOrderItem> orderItems;
+  final List<Payment> payments;
+  final PaymentSummary paymentSummary;
 }

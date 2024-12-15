@@ -133,6 +133,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "page3subtitle":
             MessageLookupByLibrary.simpleMessage("sargytlaryňyzy kabul ediň!"),
         "page3title": MessageLookupByLibrary.simpleMessage("Gysga wagtda"),
+        "paid": MessageLookupByLibrary.simpleMessage("Tölendi:"),
+        "paymentHistory": MessageLookupByLibrary.simpleMessage("Töleg taryhy"),
         "phone": MessageLookupByLibrary.simpleMessage("Telefon belgiňiz"),
         "privacyPolicyLink":
             MessageLookupByLibrary.simpleMessage("media/privacy_policy.pdf"),
@@ -163,6 +165,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "referrersPhone":
             MessageLookupByLibrary.simpleMessage("Maslahat bereniň nomeri"),
         "region": MessageLookupByLibrary.simpleMessage("Welaýat (şäher)"),
+        "remaining": MessageLookupByLibrary.simpleMessage("Galdy:"),
         "removeFromCart":
             MessageLookupByLibrary.simpleMessage("Sebetden aýyrmak"),
         "removeFromFavorites":
@@ -218,6 +221,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "start": MessageLookupByLibrary.simpleMessage("Başla"),
         "today": MessageLookupByLibrary.simpleMessage("Bu gün"),
         "total": MessageLookupByLibrary.simpleMessage("Jemi"),
+        "totalPrice": MessageLookupByLibrary.simpleMessage("Umumy bahasy"),
         "unknownError": MessageLookupByLibrary.simpleMessage(
             "Amal wagtlaýyn elýeter däl.\nBiraz wagtdan synanyşyp görüň."),
         "userAgreementLink":
