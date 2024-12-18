@@ -14,7 +14,6 @@ import 'bloc/brands_bloc.dart';
 class BrandsScreen extends StatefulWidget {
   const BrandsScreen({super.key});
 
-
   @override
   State<BrandsScreen> createState() => _BrandsScreenState();
 }
@@ -28,7 +27,7 @@ class _BrandsScreenState extends State<BrandsScreen> {
   void initState() {
     super.initState();
     pagingController.addPageRequestListener((next) {
-      context.read<BrandsBloc>().add(BrandsRequested(page.toString()));
+      context.read<BrandsBloc>().add(BrandsRequested(next));
     });
   }
 
@@ -47,7 +46,7 @@ class _BrandsScreenState extends State<BrandsScreen> {
             if (state.brands.length < kLimit) {
               pagingController.appendLastPage(state.brands);
             } else {
-              pagingController.appendPage(state.brands, (page++).toString());
+              pagingController.appendPage(state.brands, state.next);
             }
           } else if (state is BrandsLoadError) {
             pagingController.error = state.message;

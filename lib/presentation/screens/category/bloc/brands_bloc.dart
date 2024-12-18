@@ -12,13 +12,15 @@ part 'brands_state.dart';
 class BrandsBloc extends Bloc<BrandsEvent, BrandsState> {
   BrandsBloc(this._searchProducts) : super(BrandsInitial()) {
     on<BrandsRequested>((event, emit) async {
-      final r = await _searchProducts(event.page);
+      final r = await _searchProducts(event.next);
       emit(r.fold(
         (error) => BrandsLoadError(error.message),
-        (pagination) => BrandsLoadSuccess(
-          brands: pagination.items,
-          next: pagination.next,
-        ),
+        (pagination) {
+          return BrandsLoadSuccess(
+            brands: pagination.items,
+            next: pagination.next,
+          );
+        },
       ));
     });
   }

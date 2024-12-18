@@ -21,9 +21,6 @@ class _HLSPlayerState extends State<HLSPlayer> {
 
   @override
   void initState() {
-    print(widget.video);
-    // media = widget.media;
-
     const controlsConfiguration = BetterPlayerControlsConfiguration(
       controlBarColor: Colors.transparent,
       iconsColor: Colors.white,

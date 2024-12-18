@@ -5,6 +5,6 @@ abstract class BrandsEvent {
 }
 
 class BrandsRequested extends BrandsEvent {
-  const BrandsRequested(this.page);
-  final String page;
+  const BrandsRequested(this.next);
+  final String? next;
 }

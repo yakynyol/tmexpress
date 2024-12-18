@@ -26,7 +26,8 @@ class BrandCard extends StatelessWidget {
           AppImage(
             brand.image,
             width: 80,
-            borderRadius: BorderRadius.circular(4),
+            height: 80,
+            borderRadius: BorderRadius.circular(12),
           ),
           const SizedBox(height: 16),
           Expanded(

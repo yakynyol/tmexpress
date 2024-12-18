@@ -87,13 +87,9 @@ class CartBloc extends Bloc<CartEvent, CartState> {
 
     for (final item in itemsList) {
       if (item is Map) {
-        // Convert Map<dynamic, dynamic> to Map<String, dynamic>
-        print(item.runtimeType);
-
         final convertedItem =
             _convertToStringKeysRecursively(item) as Map<String, dynamic>;
         final cartItem = CartItem.fromJson(convertedItem);
-        print(cartItem.count);
         _items.add(cartItem);
       }
     }

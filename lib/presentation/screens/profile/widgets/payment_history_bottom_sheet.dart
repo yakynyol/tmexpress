@@ -35,13 +35,14 @@ class PaymentHistoryBottomSheet extends StatelessWidget {
           const SizedBox(height: 16),
           Container(
             constraints: BoxConstraints(
-                maxHeight: MediaQuery.of(context).size.height * .7),
+                maxHeight: MediaQuery.of(context).size.height * .7,
+                minHeight: 300),
             child: ListView.separated(
-              itemCount: payments.length * 10,
+              shrinkWrap: true,
+              itemCount: payments.length,
               separatorBuilder: (_, __) =>
                   const Divider(height: 24, thickness: .5),
-              itemBuilder: (_, index) =>
-                  PaymentHistoryItem(payments[index % 2]),
+              itemBuilder: (_, index) => PaymentHistoryItem(payments[index]),
             ),
           ),
         ],
